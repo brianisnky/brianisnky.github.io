@@ -20,14 +20,23 @@
 
     <!-- BASE CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css?v=6" rel="stylesheet">
+    <link href="css/style.css?v=9" rel="stylesheet">
 	<link href="css/vendors.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet">
 
 </head>
-
+<style>
+	#logo img{
+		width: 13%;
+	}
+	@media (max-width: 767px) {
+		#logo img{
+			width: 33%;
+		}
+	}
+</style>
 <body class="style_2">
 	
 	<div id="preloader">
@@ -41,12 +50,11 @@
 	<header>
 	    <div class="container-fluid">
 	        <div class="row">
-	            <div class="col-5">
-	                <a href="index.html"><img src="img/Logo-PNG.png" alt="" width="30%" ></a>
+	            <div class="col-12" id="logo">
+	                <a href="index.html"><img  src="img/Logo-PNG.png" alt="" width="25%"></a>
+					<img src="img/logoartesanal.png" width="25%" style="float: right;">
 	            </div>
-	            <div class="col-7" style="text-align: right;">
-					<img src="img/logoartesanal.png" width="25%">
-	            </div> 
+	            
 	        </div>
 	        <!-- /row -->
 	    </div>
