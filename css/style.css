@@ -1187,7 +1187,7 @@ span.error:after {
     padding: 10px;
   }
 }
-.container_smile .radio:after {
+.radio:after {
   font-family: 'smiles';
   font-size: 42px;
   font-size: 2.625rem;
@@ -1207,7 +1207,7 @@ span.error:after {
 .container_smile .radio span {
   display: none;
 }
-.container_smile .radio.smile_1:after {
+.radio.smile_1:after {
   content: '\0041';
 }
 .container_smile .radio.smile_2:after {
