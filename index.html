@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Satisfaction Survey form Wizard by Ansonika.">
+    <meta name="author" content="Ansonika">
+    <title>Encuesta de Satisfaction Ruben's</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css?v=6" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="style_2">
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<header>
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="col-5">
+	                <a href="index.html"><img src="img/Logo-PNG.png" alt="" width="30%" ></a>
+	            </div>
+	            <div class="col-7" style="text-align: right;">
+					<img src="img/logoartesanal.png" width="25%">
+	            </div> 
+	        </div>
+	        <!-- /row -->
+	    </div>
+	    <!-- /container -->
+	</header>
+	<!-- /header -->
+
+	<div class="wrapper_centering">
+	    <div class="container_centering">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-12">
+	                    <div id="wizard_container">
+	                        <div id="top-wizard">
+	                            <div id="progressbar"></div>
+	                        </div>
+	                        <!-- /top-wizard -->
+	                        <form id="wrapped" method="POST" autocomplete="off">
+	                            <input id="website" name="website" type="text" value="">
+	                            <!-- Leave for security protection, read docs for details -->
+	                            <div id="middle-wizard">
+	                                <div class="step">
+										<h1 style="color:white">PLATILLOS </h1>
+	                                    <h3 class="main_question">Presentación del plato</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+													<div class="container_smile">
+	                                                    <input type="radio" id="very_bad_1" name="question_1" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_1"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_1" name="question_1" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_1"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_1" name="question_1" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_1"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_1" name="question_1" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_1"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_1" name="question_1" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_1"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                   	<h3 class="main_question">Sabor </h3>
+										<div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_1" name="question_2" class="required" value="Very bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_1" for="very_bad_1"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_2" name="question_2" class="required" value="Bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_2" for="bad_2"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_2" name="question_2" class="required" value="Average" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_3" for="average_2"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_2" name="question_2" class="required" value="Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_4" for="good_2"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_2" name="question_2" class="required" value="Very Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_5" for="very_good_2"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">Porción  </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_3" name="question_3" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_3"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_3" name="question_3" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_3"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_3" name="question_3" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_3"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_3" name="question_3" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_3"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_3" name="question_3" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_3"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<div class="form-group">
+	                                        <label for="additional_message_2_label">¿Qué otro platillo te gustaría que ofreciéramos?    </label>
+	                                        <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;" onkeyup="getVals(this, 'additional_message_2');"></textarea>
+	                                    </div>
+	                                </div>
+	                                <!-- /step 1-->
+
+	                                <div class="step">
+										<h1 style="color:white">BEBIDAS  </h1>
+	                                    <h3 class="main_question">Presentación de su bebida</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_4" name="question_4" class="required" value="Very bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_1" for="very_bad_4"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_4" name="question_4" class="required" value="Bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_2" for="bad_4"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_4" name="question_4" class="required" value="Average" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_3" for="average_4"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_4" name="question_4" class="required" value="Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_4" for="good_4"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_4" name="question_4" class="required" value="Very Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_5" for="very_good_4"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <h3 class="main_question">Temperatura de su bebida </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_5" name="question_5" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_5"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_5" name="question_5" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_5"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_5" name="question_5" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_5"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_5" name="question_5" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_5"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_5" name="question_5" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_5"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">Porción  </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_6" name="question_6" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_1"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_6" name="question_6" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_6"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_6" name="question_6" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_6"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_6" name="question_6" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_6"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_7" name="question_7" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_7"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">Sabor  </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_7" name="question_7" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_7"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_7" name="question_7" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_7"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_7" name="question_7" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_7"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_7" name="question_7" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_7"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_7" name="question_7" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_7"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                </div>
+	                                <!-- /step 2-->
+
+	                                <div class="step">
+										<h1 style="color:white">INSTALACONES   </h1>
+	                                    <h3 class="main_question">Comedor y Sillas</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_8" name="question_8" class="required" value="Very bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_1" for="very_bad_8"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_8" name="question_8" class="required" value="Bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_2" for="bad_8"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_8" name="question_8" class="required" value="Average" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_3" for="average_8"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_8" name="question_8" class="required" value="Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_4" for="good_8"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_8" name="question_8" class="required" value="Very Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_5" for="very_good_8"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <h3 class="main_question">Sanitarios</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_9" name="question_9" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_9"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_9" name="question_9" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_9"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_9" name="question_9" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_9"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_9" name="question_9" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_9"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_9" name="question_9" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_9"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">Iluminación   </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_10" name="question_10" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_10"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_10" name="question_10" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_10"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_10" name="question_10" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_10"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_10" name="question_10" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_10"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_10" name="question_10" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_10"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">Temperatura del Salón   </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_11" name="question_11" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_11"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_11" name="question_11" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_11"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_11" name="question_11" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_11"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_11" name="question_11" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_11"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_11" name="question_11" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_11"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                </div>
+	                                <!-- /step 3-->
+									<div class="step">
+										<h1 style="color:white">PERSONAL   </h1>
+	                                    <h3 class="main_question">Lo recibieron y acompañaron a su mesa</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_12" name="question_12" class="required" value="Very bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_1" for="very_bad_12"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_12" name="question_12" class="required" value="Bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_2" for="bad_12"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_12" name="question_12" class="required" value="Average" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_3" for="average_12"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_12" name="question_12" class="required" value="Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_4" for="good_12"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_12" name="question_12" class="required" value="Very Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio smile_5" for="very_good_12"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <h3 class="main_question">¿Cómo lo atendió su mesero?</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_13" name="question_13" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_13"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_13" name="question_13" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_13"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_13" name="question_13" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_13"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_13" name="question_13" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_13"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_13" name="question_13" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_13"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">¿Cómo considera la atención brindada por el gerente? </h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_14" name="question_14" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_14"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_14" name="question_14" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_14"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_14" name="question_14" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_14"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_14" name="question_14" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_14"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_14" name="question_14" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_10"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<h3 class="main_question">¿Cómo considera la atención brindada por el gerente?</h3>
+	                                    <div class="review_block_smiles">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_smile">
+	                                                    <input type="radio" id="very_bad_16" name="question_16" class="required" value="Very bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_1" for="very_bad_16"><span>Very bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_smile">
+	                                                    <input type="radio" id="bad_16" name="question_16" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_2" for="bad_16"><span>Bad</span></label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="average_16" name="question_16" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_3" for="average_16"><span>Average</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="good_16" name="question_16" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_4" for="good_16"><span>Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_smile">
+	                                                    <input type="radio" id="very_good_16" name="question_16" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio smile_5" for="very_good_16"><span>Very Good</span></label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Muy deficiente</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-end">
+	                                    			<em>Excelente</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										<div class="form-group">
+	                                        <label for="additional_message_3_label">¿Dónde le gustaría que tuviéramos otra sucursal?   </label>
+	                                        <textarea name="additional_message_3" id="additional_message_3_label" class="form-control" style="height:120px;" onkeyup="getVals(this, 'additional_message_3');"></textarea>
+	                                    </div>
+	                                </div>
+	                                <!-- /step 4-->
+
+	                                <div class="submit step">
+	                                    <div class="form-group">
+	                                        <label for="additional_message_4_label">Comentarios adicionales  </label>
+	                                        <textarea name="additional_message_4" id="additional_message_4_label" class="form-control" style="height:120px;" onkeyup="getVals(this, 'additional_message_3');"></textarea>
+	                                    </div>
+	                                </div>
+	                                <!-- /step 5-->
+
+	                            </div>
+	                            <!-- /middle-wizard -->
+
+	                            <div id="bottom-wizard">
+	                                <button type="button" name="backward" class="backward">Anterior</button>
+	                                <button type="button" name="forward" class="forward">Siguiente</button>
+	                                <button type="button" name="process" id="showmodal" class="submit" >Enviar</button>
+	                            </div>
+	                            <!-- /bottom-wizard -->
+
+	                        </form>
+	                    </div>
+	                    <!-- /Wizard container -->
+	                </div>
+	                <!-- /col -->
+	            </div>
+	        </div>
+	        <!-- /row -->
+	    </div>
+	    <!-- /container_centering -->
+	    <footer>
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-7" >
+						<div id="social">
+							<i class="bi bi-facebook"></i>
+							<i class="bi bi-twitter-x"></i>
+							<i class="bi bi-instagram"></i>
+							<i class="bi bi-tiktok"></i>
+						</div>
+	                </div>
+					<div class="col-md-5" style="text-align: right;">
+	                    ©Ruben´s Hamburguers
+	                </div>
+	                
+	            </div>
+	            <!-- /row -->
+	        </div>
+	        <!-- /container-fluid -->
+	    </footer>
+	    <!-- /footer -->
+	</div>
+	<!-- /wrapper_centering -->
+
+	<!-- Modal terms -->
+	<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div style="width: 100%; text-align: center;">
+						<img src="img/Logo-PNG.png" alt="" width="30%" margin="50%" >
+					</div>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body" style="text-align: center;">
+					<p style="font-size: 2rem;"><strong>Gracias por ayudarnos a seguir mejorando.</strong> </p>
+					<p  style="font-size: 1.5rem;"> Tu folio de promoción es:<br> 15015</p>
+					
+					<p  style="font-size: 1.5rem;"> Presentalo en tu siguiente visita y recibiras un regalo. </p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="js/bootstrap.bundle.js"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/functions.js"></script>
+
+	<!-- Wizard script -->
+	<script src="js/survey_func.js?V=2"></script>
+	<script>
+		$('#showmodal').on('click', function() {
+         $('#exampleModal').modal('show');
+		});
+
+	</script>
+</body>
+</html>
