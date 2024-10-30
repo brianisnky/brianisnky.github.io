@@ -46,7 +46,7 @@ body {
   color: #444;
 }
 body.style_1 {
-  background: #ce61c9 url(../img/pattern_3.svg) no-repeat center left;
+  background: rgb(19, 101, 72) url(../img/pattern_3.svg) no-repeat center left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -54,9 +54,10 @@ body.style_1 {
 }
 @media (max-width: 767px) {
   body.style_1 {
-    background: #ce61c9;
+    background: rgb(19, 101, 72);
   }
 }
+
 body.style_2 {
 
   background: rgb(19, 101, 72) url(../img/pattern_3.svg) no-repeat center left;
@@ -69,7 +70,7 @@ body.style_2 {
 }
 @media (max-width: 767px) {
   body.style_2 {
-    background: #9933ff;
+    background: rgb(19, 101, 72);
   }
 }
 body.style_3 {
