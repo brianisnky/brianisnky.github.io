@@ -15,6 +15,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 - 2.1 Wizard
 - 2.2 Success submit
 
+
 3. COMMON
 - 3.1 Misc
 - 3.2 Spacing
@@ -60,14 +61,19 @@ body.style_1 {
 
 body.style_2 {
 
-  background:rgb(14 114 80);
+  background: rgb(19, 101, 72);
 /*   background: #9933ff url(../img/pattern_3.svg) no-repeat center left;
- */
+ */  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 @media (max-width: 767px) {
   body.style_2 {
-    background: rgb(14 114 80);
+    background: rgb(19, 101, 72);
   }
+}
 body.style_3 {
   background: #454de5 url(../img/pattern_3.svg) no-repeat center left;
   -webkit-background-size: cover;
@@ -430,11 +436,7 @@ footer ul li a:hover {
   position: relative;
   z-index: 1;
   overflow: hidden;
- /* background: -moz-linear-gradient(165deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
-  background: -webkit-linear-gradient(165deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
-  background: linear-gradient(165deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -1626,3 +1628,4 @@ body[dir=rtl] .fl-form .fl-wrap-select:after {
   right: unset;
   left: 6px;
 }
+
